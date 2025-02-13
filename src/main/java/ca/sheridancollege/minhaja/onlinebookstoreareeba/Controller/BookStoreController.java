@@ -28,7 +28,7 @@ public class BookStoreController {
     @GetMapping("/available-books")
     public String availableBooks(Model model) {
         model.addAttribute("books", bookService.getBooks());
-        return "available-books";
+        return "AvailableBooks";
     }
 
     @PostMapping("/add-book")
@@ -40,7 +40,7 @@ public class BookStoreController {
     @GetMapping("/shopping-cart")
     public String shoppingCart(Model model) {
         model.addAttribute("cart", cartService.getCart());
-        return "shopping-cart";
+        return "ShoppingCart";
     }
 
     @PostMapping("/add-to-cart")
@@ -49,7 +49,7 @@ public class BookStoreController {
                 .filter(book -> book.getBookISBN().equals(isbn))
                 .findFirst()
                 .ifPresent(cartService::addToCart);
-        return "redirect:/shopping-books";
+        return "redirect:/shopping-cart";
     }
 
     @GetMapping("/checkout")
@@ -58,7 +58,7 @@ public class BookStoreController {
         model.addAttribute("subtotal", cartService.calculateSubtotal());
         model.addAttribute("tax", cartService.calculateTax());
         model.addAttribute("total", cartService.calculateTotal());
-        return "checkout";
+        return "Checkout";
     }
 
 

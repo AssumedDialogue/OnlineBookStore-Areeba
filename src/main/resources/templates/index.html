@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" href="/styles.css">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Online Bookstore</title>
 </head>
 <body>
+<header th:replace="~{HeaderAndFooter::Header}"></header>
 
+<main>
+    <h2>Welcome to Online Bookstore</h2>
+    <img th:src="@{/images/LibraryImg.jpg}" alt="Bookstore Image">
+    <p>Explore our collection of books and start shopping!</p>
+</main>
+
+<footer th:replace="~{HeaderAndFooter::Footer}"></footer>
 </body>
 </html>
