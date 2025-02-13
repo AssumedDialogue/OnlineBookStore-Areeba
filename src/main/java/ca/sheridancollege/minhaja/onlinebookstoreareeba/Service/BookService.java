@@ -17,7 +17,7 @@ public class BookService {
     public List<Book> getBooks() {
         return books;
     }
-    public void setBooks(Book book) {
+    public void addBooks(Book book) {
         books.add(book);
     }
 }
