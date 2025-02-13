@@ -10,8 +10,8 @@ public class BookService {
     private List<Book> books = new ArrayList<>();
 
     public BookService() {
-        books.add(new Book("123456789", "Book A", "Author A", 19.99));
-        books.add(new Book("987654321", "Book B", "Author B", 18.99));
+        books.add(new Book( "Book A", "Author A", 19.99));
+        books.add(new Book( "Book B", "Author B", 18.99));
     }
 
     public List<Book> getBooks() {

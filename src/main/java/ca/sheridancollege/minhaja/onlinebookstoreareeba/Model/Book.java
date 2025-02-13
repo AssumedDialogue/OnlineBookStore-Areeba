@@ -10,9 +10,9 @@ public class Book {
     private String bookAuthor;
     private Double bookPrice;
 
-    public Book(String bookISBN, String bookTitle, String bookAuthor, Double bookPrice) {
+    public Book(String bookTitle, String bookAuthor, Double bookPrice) {
         this.isbn = generateRandomISBN();
-        this.bookISBN = bookISBN;
+        this.bookISBN = String.valueOf(this.isbn);
         this.bookTitle = bookTitle;
         this.bookAuthor = bookAuthor;
         this.bookPrice = bookPrice;

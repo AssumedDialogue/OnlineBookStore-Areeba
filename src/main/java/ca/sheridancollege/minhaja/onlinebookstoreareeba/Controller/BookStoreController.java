@@ -32,8 +32,8 @@ public class BookStoreController {
     }
 
     @PostMapping("/add-book")
-    public String addBook(@RequestParam String isbn, @RequestParam String title, @RequestParam String author, @RequestParam Double price) {
-        bookService.addBook(new Book(isbn, title, author, price));
+    public String addBook(@RequestParam String title, @RequestParam String author, @RequestParam Double price) {
+        bookService.addBook(new Book(title, author, price));
         return "redirect:/available-books";
     }
 
