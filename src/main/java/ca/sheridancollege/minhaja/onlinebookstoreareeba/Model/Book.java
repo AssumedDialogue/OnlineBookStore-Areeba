@@ -12,7 +12,7 @@ public class Book {
 
     public Book(String bookTitle, String bookAuthor, Double bookPrice) {
         this.isbn = generateRandomISBN();
-        this.bookISBN = String.valueOf(this.isbn);
+        this.bookISBN = String.valueOf(isbn);
         this.bookTitle = bookTitle;
         this.bookAuthor = bookAuthor;
         this.bookPrice = bookPrice;

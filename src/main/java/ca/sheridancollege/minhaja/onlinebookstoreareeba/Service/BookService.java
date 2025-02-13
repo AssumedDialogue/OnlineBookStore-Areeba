@@ -11,7 +11,7 @@ public class BookService {
 
     public BookService() {
         books.add(new Book( "Book A", "Author A", 19.99));
-        books.add(new Book( "Book B", "Author B", 18.99));
+        books.add(new Book("Book B", "Author B", 18.99));
     }
 
     public List<Book> getBooks() {
