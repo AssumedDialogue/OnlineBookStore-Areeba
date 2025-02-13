@@ -40,6 +40,7 @@ public class BookStoreController {
     @GetMapping("/shopping-cart")
     public String shoppingCart(Model model) {
         model.addAttribute("cart", cartService.getCart());
+        model.addAttribute("books", bookService.getBooks());
         return "ShoppingCart";
     }
 
